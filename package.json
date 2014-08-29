@@ -2,7 +2,7 @@
     "name": "MarkdownParser",
     "version": "0.1.0",
     "devDependencies": {
-        "prompt": "*",
+		"prompt": "*",
 		"q": "*",
 		"marked": "*",
 		"highlight": "*"
