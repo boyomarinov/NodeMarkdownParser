@@ -3,10 +3,13 @@
 ## Installation and usage
  - Install [NodeJS][]
  - run the following commands in the root directory:
- - ```sh 
+ - 
+ ```sh 
  npm install 
  ``` 
- - ```sh 
+ 
+ - 
+ ```sh 
  node parser 
  ```
  - give path to the .md file you want to parse, e.g. ./example.md
