@@ -4,7 +4,15 @@
 		fs = require('fs'),
 		q = require('q'),
 		hl = require('highlight').Highlight,
-		props = null;
+		props = null,
+		codeHighlightThemeEnum = {
+			default: 'defaultMdTemplate.txt',
+			github: 'githubMdTemplate.txt',
+			magula: 'magulaMdTemplate.txt',
+			vs: 'vsMdTemplate.txt',
+			zenburn: 'zenburnMdTemplate.txt'
+		},
+		currentTheme = codeHighlightThemeEnum.vs;
 
 	main();
 
@@ -68,8 +76,8 @@
 				console.log(err); 
 			} else {
 				var convAndHighltd = hl(converted, false, true);
-				readFileContent('./templates/mkdTempl.txt').then(function (tmpl) {
-					defer.resolve(tmpl + convAndHighltd + '</div></body></html>');
+				readFileContent('./templates/' + currentTheme).then(function (tmpl) {
+					defer.resolve(tmpl + convAndHighltd + '</body></html>');
 				}, function (err) {
 					defer.reject(err);
 				});
