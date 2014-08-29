@@ -79,19 +79,19 @@
 		return defer.promise;
 	}
 
-	function saveHtmlFile(filepath, content){
-        var htmlFilepath = filepath.substring(0, filepath.lastIndexOf('.')) + '.html';
+	function saveHtmlFile(filepath, content) {
+		var htmlFilepath = filepath.substring(0, filepath.lastIndexOf('.')) + '.html';
         
-        convertToHTML(content).then(function (converted) {
-        	fs.writeFile(htmlFilepath, converted, function(err) {
-            	if (err) {
-            	    console.log(err);
-            	} else {
-            	    console.log('Saved successfully!');
-            	}
-        	});
-        }, function (err) {
-        	console.log(err);
-        });
-    }
+		convertToHTML(content).then(function (converted) {
+			fs.writeFile(htmlFilepath, converted, function(err) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log('Saved successfully!');
+				}
+			});
+		}, function (err) {
+			console.log(err);
+		});
+	}
 })();
