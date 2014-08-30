@@ -1,10 +1,16 @@
 {
     "name": "MarkdownParser",
+    "description": "Simple Markdown-to-HTML parser",
     "version": "0.1.0",
+    "license": "MIT",
+    "repository": {
+    	"type": "git",
+    	"url": "https://github.com/boyomarinov/NodeMarkdownParser.git"
+    },
     "devDependencies": {
 		"prompt": "*",
-		"q": "*",
-		"marked": "*",
-		"highlight": "*"
+		"q": "^1.0.1",
+		"marked": "^0.3.2",
+		"highlight": "^0.2.3"
     }
 }
